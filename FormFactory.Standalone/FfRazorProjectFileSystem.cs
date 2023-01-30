@@ -15,5 +15,10 @@ namespace FormFactory.Standalone
         {
             return new MyRazorProjectItem(path);
         }
+
+        public override RazorProjectItem GetItem(string path, string fileKind)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

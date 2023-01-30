@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Authors>Harry McIntyre</Authors>
-    <TargetFrameworks>net462</TargetFrameworks>
+    <TargetFrameworks>net48;</TargetFrameworks>
     <Title>FormFactory.AspMvc - Install this for .net451/MVC5 - MVC5 and AspNetCore Dynamic Forms Component Engine (shared component package)</Title>
     <Company>Harry McIntyre</Company>
     <PackageVersion>1.0.0</PackageVersion>
@@ -15,7 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
