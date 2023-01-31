@@ -30,8 +30,6 @@ namespace FormFactory
             GetRulesFromAttributes
         };
 
-
-
         private static IEnumerable<ModelClientValidationRule> GetRulesFromAttributes(PropertyVm property)
         {
             return property.GetCustomAttributes()

@@ -11,9 +11,7 @@ namespace FormFactory
 
         public FormVm(MethodInfo mi, string actionUrl)  
         {
-
             var inputs = new List<PropertyVm>();
-
 
             foreach (var pi in mi.GetParameters())
             {
@@ -27,13 +25,11 @@ namespace FormFactory
                     inputs.Add(new PropertyVm(pi));
                 }
             }
-            
 
             Inputs = inputs;
             Buttons.Add(new PropertyVm(typeof(SubmitButton), "") { Value = new FormFactory.Components.SubmitButton()});
             this.DisplayName = mi.Name.Sentencise(true);
             ExcludePropertyErrorsFromValidationSummary = true;
-
 
             this.ActionUrl = actionUrl;
         }
@@ -51,7 +47,6 @@ namespace FormFactory
         public IList<PropertyVm> Inputs { get; set; } = new List<PropertyVm>();
         public IList<PropertyVm> Buttons { get; set; } = new List<PropertyVm>();
 
-
         public string DisplayName { get; set; }
 
         public bool ExcludePropertyErrorsFromValidationSummary { get; set; }
@@ -66,8 +61,6 @@ namespace FormFactory
         /// True to force https from http; False to force http from https.
         /// NOTE: Does not apply if ActionUrl has been explicitly set.
         /// </summary>
-
-       
 
         public override string ToString()
         {

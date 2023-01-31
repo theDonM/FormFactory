@@ -95,7 +95,6 @@ namespace FormFactory
             return new FormFactoryHtmlHelper(html).Choices(model);
         }
 
-
         public static MethodInfo MethodInfo(this Expression method)
         {
             var lambda = method as LambdaExpression;
