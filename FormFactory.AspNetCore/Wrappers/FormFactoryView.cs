@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.AspNetCore.Mvc.ViewEngines;
+﻿using Microsoft.AspNetCore.Mvc.ViewEngines;
 
 namespace FormFactory.AspMvc.Wrappers
 {

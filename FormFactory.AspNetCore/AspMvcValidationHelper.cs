@@ -5,7 +5,6 @@ using FormFactory.Attributes;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-
 using FormFactory.AspMvc.Wrappers;
 using FormFactory.UnobtrusiveValidation;
 using Microsoft.AspNetCore.Html;
@@ -15,14 +14,10 @@ namespace FormFactory
 {
     public static class AspMvcValidationHelper
     {
-
         public static IHtmlContent AllValidationMessages(this IHtmlHelper helper, string modelName)
         {
             if (HasErrors(helper, modelName))
-            {
-                var message = string.Join(", ", helper.ViewData.ModelState[modelName].Errors.Select(e => e.ErrorMessage));
-                return new HtmlString(message);
-            }
+                return new HtmlString( string.Join(", ", helper.ViewData.ModelState[modelName].Errors.Select(e => e.ErrorMessage)));
             return new HtmlString("");
         }
 
@@ -36,8 +31,6 @@ namespace FormFactory
         {
             GetRulesFromAttributes
         };
-
-
 
         private static IEnumerable<ModelClientValidationRule> GetRulesFromAttributes(PropertyVm property)
         {
@@ -82,9 +75,6 @@ namespace FormFactory
         public delegate IEnumerable<ModelClientValidationRule> UnobtrusiveValidationRule(PropertyVm property);
         public delegate ModelClientValidationRule UnobtrusiveValidationAttributeRule(PropertyVm property, object attribute);
 
-
-
-
         public static IHtmlContent UnobtrusiveValidation(this IHtmlHelper helper, PropertyVm property)
         {
             var unobtrusiveValidation = ValidationHelper.UnobtrusiveValidation(new FormFactoryHtmlHelper(helper), property);
@@ -92,5 +82,4 @@ namespace FormFactory
             return new HtmlString(unobtrusiveValidation);
         }
     }
-
 }

@@ -2,7 +2,6 @@
 using System.Linq.Expressions;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace FormFactory.AspMvc.Wrappers
 {
     class FormFactoryUrlHelper : FormFactory.UrlHelper
@@ -26,6 +25,5 @@ namespace FormFactory.AspMvc.Wrappers
         {
             return _mvcUrlHelper.Action(actionName, controllerName);
         }
- 
     }
 }

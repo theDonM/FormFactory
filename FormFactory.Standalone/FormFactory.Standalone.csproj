@@ -7,7 +7,9 @@
     <Company>Harry McIntyre</Company>
     <PackageVersion>1.0.0</PackageVersion>
     <Product>Harry McIntyre</Product>
-    <Description>FormFactory is a UI component engine for Console apps, ASP.NET Core and MVC5. It reflects over your view models to build a component tree, then renders that according to customisable templates. Drive yuour views by convention instead of hard coding them.</Description>
+    <Description>FormFactory is a UI component engine for Console apps, ASP.NET Core and MVC5. 
+    It reflects over your view models to build a component tree, then renders that according to customisable templates.
+    Drive yuour views by convention instead of hard coding them.</Description>
     <PackageProjectUrl>https://github.com/mcintyre321/FormFactory</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/mcintyre321/SirenDotNet/blob/master/LICENSE</PackageLicenseUrl>
     <PackageTags>dynamic forms, asp, editortemplates</PackageTags>
@@ -19,6 +21,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.2.0" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>

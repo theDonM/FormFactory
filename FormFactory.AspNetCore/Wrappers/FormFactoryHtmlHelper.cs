@@ -27,7 +27,6 @@ namespace FormFactory.AspMvc.Wrappers
             throw new NotImplementedException("uh o9h");
             //return new Encoder().WriteTypeToString(type);
         }
-       
 
         public ViewData ViewData { get { return new FormFactoryViewData(_helper.ViewData); } }
         public IViewFinder ViewFinder { get{return new FormFactoryContext(_helper.ViewContext);} }

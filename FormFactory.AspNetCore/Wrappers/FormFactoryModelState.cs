@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-
 namespace FormFactory.AspMvc.Wrappers
 {
 
@@ -10,10 +9,11 @@ namespace FormFactory.AspMvc.Wrappers
     {
         public static FormFactoryModelStateErrors ToFfModelStateErrors(this ModelErrorCollection mvcErrors)
         {
-            return new FormFactoryModelStateErrors(mvcErrors.Select(e => new FormFactoryModelStateError()
-            {
-                ErrorMessage = e.ErrorMessage
-            }));
+            return new FormFactoryModelStateErrors(
+                mvcErrors.Select(e => new FormFactoryModelStateError()
+                    {
+                        ErrorMessage = e.ErrorMessage
+                    }));
         }
     }
 

@@ -81,7 +81,6 @@ namespace FormFactory.Standalone
                 builder.SetNamespace(namespaceName); // define a namespace for the Template class
             });
 
-
             var item = fs.GetItem(viewPath);
 
             var codeDocument = engine.Process(item);

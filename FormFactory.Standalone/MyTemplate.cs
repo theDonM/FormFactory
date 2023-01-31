@@ -120,9 +120,7 @@ namespace FormFactory.Standalone
             if (value != null)
             {
                 if (!string.IsNullOrEmpty(prefix))
-                {
                     WritePositionTaggedLiteral(prefix, prefixOffset);
-                }
 
                 BeginContext(valueOffset, valueLength, isLiteral);
 
@@ -137,21 +135,13 @@ namespace FormFactory.Standalone
 
             // The extra branching here is to ensure that we call the Write*To(string) overload where possible.
             if (isLiteral && stringValue != null)
-            {
                 WriteLiteral(stringValue);
-            }
             else if (isLiteral)
-            {
                 WriteLiteral(value);
-            }
             else if (stringValue != null)
-            {
                 Write(stringValue);
-            }
             else
-            {
                 Write(value);
-            }
         }
 
 
