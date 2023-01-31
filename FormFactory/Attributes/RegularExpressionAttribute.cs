@@ -3,9 +3,12 @@ using System;
 namespace FormFactory.Attributes
 {
     public class RegularExpressionAttribute : Attribute {
-        public RegularExpressionAttribute(string pattern)
+        public RegularExpressionAttribute(
+            string pattern,
+            string friendlyFormat = null)
         {
             Pattern = pattern;
+            FriendlyFormat = friendlyFormat;
         }
 
         public string FormatErrorMessage(string propertyVmDisplayName)
